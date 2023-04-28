@@ -1,6 +1,8 @@
 package Tests;
 import Base.Base;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 import static io.restassured.RestAssured.given;
@@ -76,6 +78,9 @@ public void addUser(){
         //String body="{\"id\":\"11\",\"name\":\"APatricia Lebsack\",\"username\":\"AKarianne\",\"email\":\"AJulianne.OConner@kory.org\",\"address\":{\"street\":\"AHoeger Mall\",\"suite\":\"AApt. 692\",\"city\":\"ASouth Elvis\",\"zipcode\":\"53919-4257\",\"geo\":{\"lat\":\"29.4572\",\"lng\":\"-164.2990\"}},\"phone\":\"493-170-9623 x156\",\"website\":\"akale.biz\",\"company\":{\"name\":\"ARobel-Corkery\",\"catchPhrase\":\"AMulti-tiered zero tolerance productivity\",\"bs\":\"atransition cutting-edge web services\"}}";
         String response=given().body(body).when().post(baseClass.endpoint).then().assertThat()
             .statusCode(201).extract().response().asString();
+    //Response res=given().body(body).when().post(baseClass.endpoint).then();
+    ResponseBody resbody=given().body(body).when().post(baseClass.endpoint).getBody();
+    System.out.println("res.body:"+ resbody.asString());
 
         //Verify that the posted data are showing up in the result
         JsonPath js=new JsonPath(response);

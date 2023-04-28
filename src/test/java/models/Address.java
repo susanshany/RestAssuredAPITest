@@ -1,51 +1,37 @@
 package models;
 
-public class Address {
-    private String street;
-    private String suite;
-    private String city;
-    private String zipcode;
-    private Geo geo;
+public interface Address {
 
-    public String getStreet() {
-        return street;
-    }
+    public String getStreet();
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+    public void setStreet(String street);
 
-    public String getSuite() {
-        return suite;
-    }
+    public String getSuite();
 
-    public void setSuite(String suite) {
-        this.suite = suite;
-    }
+    public void setSuite(String suite);
 
-    public String getCity() {
-        return city;
-    }
+    public String getCity();
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+    public void setCity(String city);
 
-    public String getZipcode() {
-        return zipcode;
-    }
+    public String getZipcode();
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
+    public void setZipcode(String zipcode);
 
-    public Geo getGeo() {
-        return geo;
-    }
+    String getLat();
 
-    public void setGeo(Geo geo) {
-        this.geo = geo;
-    }
+    void setLat(String lat);
+
+    String getLng();
+
+    void setLng(String lng);
+
+    public interface Geo{
+       public String getLat();
+       public void setLat(String lat);
+       public String getLng();
+       public void setLng(String lng);
+   }
 
 
 

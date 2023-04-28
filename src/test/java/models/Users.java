@@ -1,15 +1,28 @@
 package models;
 
-public class Users {
+public class Users implements Address,Company {
 
     private String id;
     private String name;
     private String username;
     private String email;
-    private Address address;
+
     private String phone;
     private String website;
-    private Company company;
+    //private Company company;
+    private String cmpName;
+    private String catchPhrase;
+    private String bs;
+
+    //private Address address;
+    private String street;
+    private String suite;
+    private String city;
+    private String zipcode;
+
+    //Geo
+    private String lat;
+    private String lng;
 
 
     public String getId() {
@@ -20,9 +33,7 @@ public class Users {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -44,14 +55,6 @@ public class Users {
         this.email = email;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -68,12 +71,97 @@ public class Users {
         this.website = website;
     }
 
-    public Company getCompany() {
-        return company;
+
+
+
+    @Override
+    public void setCmpName(String cmpName) {
+
     }
 
-    public void setCompany(Company company) {
-        this.company = company;
+    @Override
+    public String getCmpName() {
+        return cmpName;
+    }
+
+    @Override
+    public String getCatchPhrase() {
+        return catchPhrase;
+    }
+
+    @Override
+    public void setCatchPhrase(String catchPhrase) {
+        this.catchPhrase = catchPhrase;
+    }
+
+    @Override
+    public String getBs() {
+        return bs;
+    }
+
+    @Override
+    public void setBs(String bs) {
+        this.bs = bs;
+    }
+
+    @Override
+    public String getStreet() {
+        return street;
+    }
+
+    @Override
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    @Override
+    public String getSuite() {
+        return suite;
+    }
+
+    @Override
+    public void setSuite(String suite) {
+        this.suite = suite;
+    }
+
+    @Override
+    public String getCity() {
+        return city;
+    }
+
+    @Override
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    @Override
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    @Override
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    @Override
+    public String getLat() {
+        return lat;
+    }
+
+    @Override
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    @Override
+    public String getLng() {
+        return lng;
+    }
+
+    @Override
+    public void setLng(String lng) {
+        this.lng = lng;
     }
 
 }

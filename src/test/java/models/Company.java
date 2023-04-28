@@ -1,34 +1,18 @@
 package models;
 
-public class Company {
-    private String name;
-    private String catchPhrase;
-    private String bs;
+public interface Company {
 
 
-    public String getName() {
-        return name;
-    }
+    public String getCmpName();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setCmpName(String cmpName);
 
-    public String getCatchPhrase() {
-        return catchPhrase;
-    }
+    public String getCatchPhrase();
 
-    public void setCatchPhrase(String catchPhrase) {
-        this.catchPhrase = catchPhrase;
-    }
+    public void setCatchPhrase(String catchPhrase);
+    public String getBs();
 
-    public String getBs() {
-        return bs;
-    }
-
-    public void setBs(String bs) {
-        this.bs = bs;
-    }
+    public void setBs(String bs);
 
 
 
